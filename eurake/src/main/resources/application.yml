@@ -1,0 +1,23 @@
+server:
+  port: 7001
+
+spring:
+  application:
+    name: eurake
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+  server:
+    #是否开启自我保护机制
+    enable-self-preservation: false
+    #清理间隔时间
+    eviction-interval-timer-in-ms: 5000
+
+#日志
+logging:
+  level:
+    root: info
